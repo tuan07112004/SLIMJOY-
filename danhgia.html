@@ -6,108 +6,140 @@
 <title>User Reviews</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
+/* Định dạng chung cho toàn bộ phần tử body */
+body {
+    background-image: url("background.jpg"); /* Hình nền cho thẻ body, sử dụng hình ảnh "Click Here.jpg" */
+    font-family: Arial, sans-serif; /* Thiết lập loại phông chữ */
+    background-color: #fff; /* Màu nền là màu trắng */
+    color: #333; /* Màu chữ mặc định là màu xám đậm */
 }
 
+/* Định dạng cho container chứa các đánh giá */
 .review-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
+    max-width: 1200px; /* Chiều rộng tối đa của container */
+    margin: 0 auto; /* Canh giữa container trong trang */
+    padding: 50px; /* Khoảng cách đệm bên trong container */
+    background-color: rgba(39, 70, 99, 0.945); /* Màu nền cho nút */
+    border-radius: 40px; /* Bo tròn các góc */
 }
 
+/* Định dạng cho mỗi bài đánh giá của người dùng */
 .user-review {
-    background-color: #e9e9e9;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
+    background-color: #e9e9e9; /* Màu nền cho bài đánh giá */
+    border-radius: 50px; /* Bo tròn các góc */
+    padding: 40px; /* Khoảng cách đệm bên trong */
+    margin-bottom: 30px; /* Khoảng cách đệm phía dưới mỗi bài đánh giá */
+    position: relative; /* Đặt vị trí tương đối cho các thành phần bên trong */
+    font-size: 25px; /* Kích thước chữ 25px */
+
 }
 
+/* Định dạng cho phần hiển thị xếp hạng (số sao) */
 .rating {
-    font-size: 1.5em;
-    color: #ffd700;
-    position: absolute;
-    top: -10px;
-    left: -10px;
+    font-size: 2em; /* Kích thước phông chữ cho xếp hạng */
+    color: #ffd700; /* Màu chữ cho xếp hạng (màu vàng) */
+    position: absolute; /* Vị trí tuyệt đối so với phần tử cha */
+    top: 70px; /* Đặt vị trí phía trên cùng */
+    left: 170px; /* Đặt vị trí bên trái cùng */
 }
 
+/* Định dạng cho thông tin người dùng */
 .user-info img {
-    width: 100px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
+    width: 100px; /* Chiều rộng ảnh người dùng */
+    border-radius: 50%; /* Bo tròn ảnh (tạo hình tròn) */
+    float: left; /* Đặt ảnh về phía bên trái */
+    margin-right: 20px; /* Khoảng cách đệm bên phải của ảnh */
 }
 
+/* Định dạng cho tên người dùng */
 .user-name {
-    font-weight: bold;
+    font-weight: bold; /* Định dạng chữ đậm */
+    font-size: 23px; /* Kích thước chữ 25px */
+
 }
 
+/* Định dạng cho bình luận của người dùng */
 .user-comment {
-    clear: both;
+    clear: both; /* Xóa bỏ tất cả các float trước đó */
 }
 
+/* Định dạng cho tiêu đề h2 */
 h2 {
-    text-align: center;
-    color: #444;
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #ebb609; /* Màu chữ cho tiêu đề */
+    font-size: 35px; /* Kích thước chữ 25px */
+
 }
+
+
 
 /* css gửi đánh giá */
+/* Định dạng cho khu vực gửi đánh giá */
 .submit-review {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    background-color: #fff; /* Màu nền trắng */
+    padding: 30px; /* Khoảng cách đệm xung quanh nội dung */
+    margin-top: 30px; /* Khoảng cách đệm phía trên */
+    border-radius: 30px; /* Bo tròn các góc của khu vực */
+    font-size: 25px; /* Kích thước chữ 25px */
 }
 
+/* Định dạng cho form đánh giá */
 #review-form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Sử dụng flexbox để sắp xếp các mục */
+    flex-direction: column; /* Các mục được sắp xếp theo cột dọc */
+    font-size: 29px; /* Kích thước chữ 25px */
+
 }
 
+/* Định dạng cho input và textarea trong form */
 #review-form input, #review-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 30px; /* Khoảng cách đệm phía dưới mỗi mục */
+    padding: 20px; /* Khoảng cách đệm bên trong mỗi mục */
+    border: 3px solid #ccc; /* Viền màu xám nhạt */
+    border-radius: 10px; /* Bo tròn các góc của mục nhập */
+    font-size: 30px; /* Kích thước chữ 25px */
 }
 
+/* Định dạng cho phần chọn xếp hạng trong form */
 #review-form .rating-input {
-    margin-bottom: 10px;
+    margin-bottom: 0px; /* Khoảng cách đệm phía dưới phần xếp hạng */
+    font-size: 30px; /* Kích thước chữ 25px */
 }
 
+/* Định dạng cho nút gửi đánh giá */
 #review-form button {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    cursor: pointer; /* Con trỏ chuột biến thành hình bàn tay khi di chuyển lên nút */
+    padding: 20px 20px; /* Khoảng cách đệm xung quanh nút */
+    background-color: #00ff4c; /* Màu nền xanh dương */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Không có viền */
+    border-radius: 10px; /* Bo tròn các góc của nút */
+    font-size: 25px; /* Kích thước chữ 25px */
+
 }
 
+/* Định dạng cho nút khi rê chuột lên trên */
 #review-form button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Màu nền xanh dương đậm khi rê chuột lên trên */
 }
 
-/* css về trang chủ  */
+/* Định dạng cho nút quay về trang chủ */
 .home-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    display: inline-block; /* Hiển thị nút dạng block nhưng vẫn nằm trên cùng một dòng */
+    padding: 20px 20px; /* Khoảng cách đệm xung quanh nút */
+    margin: 20px 0; /* Khoảng cách đệm trên và dưới nút */
+    background-color: #15ff00; /* Màu nền xanh lá */
+    color: white; /* Màu chữ trắng */
+    text-align: center; /* Căn chữ giữa nút */
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    border-radius: 5px; /* Bo tròn các góc của nút */
+    font-weight: bold; /* Chữ đậm */
+    font-size: 25px; /* Kích thước chữ 25px */
 }
 
+/* Định dạng cho nút quay về trang chủ khi rê chuột lên trên */
 .home-button a:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Màu nền xanh dương đậm khi rê chuột lên trên */
 }
 
 
@@ -149,8 +181,8 @@ h2 {
         <div class="rating">★★★★★</div>
         <div class="user-info">
             <img src="taphuong.jpg" alt="User 1">
-            <p class="user-name">ĐỖ MINH TUẤN</p>
-            <p class="user-comment">"Trang web này thật sự thay đổi cuộc sống của tôi! ..."</p>
+            <p class="user-name">PHƯƠNG MIN</p>
+            <p class="user-comment">"Trang web này thật sự thay đổi cuộc sống của tôi! Chương trình ăn uống và bài tập được cá nhân hóa giúp tôi giảm được 10kg chỉ trong vòng 3 tháng. Tôi cảm thấy khỏe mạnh hơn và đầy năng lượng. Cảm ơn rất nhiều!"</p>
         </div>
     </div>
     <!-- User Review 2 -->
@@ -158,8 +190,8 @@ h2 {
         <div class="rating">★★★★☆</div>
         <div class="user-info">
             <img src="thephong.jpg" alt="User 2">
-            <p class="user-name">TA THI PHƯƠNG</p>
-            <p class="user-comment">"Chương trình giảm cân này khá hữu ích. ..."</p>
+            <p class="user-name">THE PHONG</p>
+            <p class="user-comment">"Chương trình giảm cân này khá hữu ích. Cộng đồng hỗ trợ nhiệt tình, và tôi thích cách có thể theo dõi tiến trình trực tuyến. Tuy nhiên, ứng dụng di động hơi khó sử dụng, hy vọng sẽ được cải thiện."</p>
         </div>
     </div>
     <!-- User Review 3 -->
@@ -167,32 +199,32 @@ h2 {
         <div class="rating">★★★☆☆</div>
         <div class="user-info">
             <img src="tranminh.jpg" alt="User 3">
-            <p class="user-name">LÊ THỊ HOÀI</p>
-            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+            <p class="user-name">HỒNG ANH</p>
+            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. Mình đã theo dõi chế độ ăn được một thời gian nhưng cảm thấy không có nhiều thay đổi. Mong rằng sẽ có thêm nhiều lựa chọn ăn uống hơn."</p>
         </div>
     </div>
     <div class="user-review">
         <div class="rating">★★★☆☆</div>
         <div class="user-info">
             <img src="ly.jpg" alt="User 3">
-            <p class="user-name">LÊ THỊ HOÀI</p>
-            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+            <p class="user-name">NGỌC LY</p>
+            <p class="user-comment"> "Thật bất ngờ với hiệu quả từ trang web này! Các bài viết về dinh dưỡng rất khoa học và dễ hiểu. Tôi đã áp dụng lịch trình tập luyện và đã thấy rõ sự cải thiện. Hỗ trợ từ cộng đồng cũng rất tuyệt vời."</p>
         </div>
     </div>
     <div class="user-review">
         <div class="rating">★★★☆☆</div>
         <div class="user-info">
             <img src="tuanminh.jpg" alt="User 3">
-            <p class="user-name">LÊ THỊ HOÀI</p>
-            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+            <p class="user-name">LƯU MINH</p>
+            <p class="user-comment"> "Giao diện thân thiện và dễ dàng theo dõi lượng calo hàng ngày. Tuy nhiên, một số mục tập luyện cần được điều chỉnh cho phù hợp với người mới bắt đầu hơn."</p>
         </div>
     </div>
     <div class="user-review">
-        <div class="rating">★★★☆☆</div>
+        <div class="rating">★★★★★</div>
         <div class="user-info">
             <img src="lehoai.jpg" alt="User 3">
-            <p class="user-name">LÊ THỊ HOÀI</p>
-            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+            <p class="user-name">LÊ HOÀI</p>
+            <p class="user-comment">"Quá tuyệt vời! Chế độ ăn được cá nhân hóa phù hợp với nhu cầu và lịch trình tập luyện linh hoạt đã giúp tôi giảm 7kg chỉ sau 2 tháng. Sẽ tiếp tục sử dụng và giới thiệu cho bạn bè!"</p>
         </div>
     </div>
     <!-- Nút quay về trang chủ -->

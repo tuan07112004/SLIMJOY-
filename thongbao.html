@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch Trình Tập Luyện và Ăn Uống</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7; /* Màu nền nhẹ cho trang */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  border: none; /* Bỏ viền mặc định */
+  border-radius: 10px; /* Bo góc */
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Thêm bóng đổ */
+  transition: 0.3s; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Hiệu ứng bóng đổ khi di chuột qua */
+}
+
+.card-header {
+  background-color: #4CAF50; /* Màu xanh lá */
+  color: white;
+  padding: 15px 20px;
+  font-weight: bold;
+  text-align: center;
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); /* Gradient màu */
+}
+
+.card-content {
+  padding: 20px;
+  background-color: white; /* Nền trắng cho nội dung */
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Bỏ margin mặc định */
+}
+
+.card-content li {
+  margin-bottom: 10px;
+  font-size: 16px; /* Cỡ chữ lớn hơn */
+  line-height: 1.6; /* Khoảng cách dòng */
+}
+
+.card-content a {
+  text-decoration: none; /* Bỏ gạch chân liên kết */
+  color: #333; /* Màu chữ đậm */
+  font-weight: bold; /* In đậm */
+}
+
+.card-content img {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #eee; /* Đường kẻ phân cách */
+  border-bottom: 1px solid #eee; /* Đường kẻ phân cách */
+  margin-bottom: 20px; /* Khoảng cách dưới ảnh */
+}
+
+.card-footer {
+  background-color: #f44336; /* Màu đỏ */
+  padding: 12px 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: relative; /* Để thêm sau :after */
+}
+
+.card-footer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  z-index: -1;
+  transition: opacity 0.3s;
+  border-radius: 0 0 10px 10px; /* Bo góc dưới của :after */
+}
+
+.card-footer:hover:after {
+  opacity: 0.9; /* Đổi độ trong suốt khi di chuột qua */
+}
+
+.text-container {
+  background-color: #333; /* Màu nền tối */
+  color: #fff; /* Màu chữ trắng */
+  padding: 20px;
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bóng đổ */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5; /* Khoảng cách giữa các dòng */
+  max-width: 300px; /* Chiều rộng tối đa của container */
+}
+
+.text-container h3 {
+  margin: 0 0 10px 0; /* Khoảng cách dưới tiêu đề */
+  padding: 0;
+  font-size: 18px; /* Kích thước font của tiêu đề */
+  border-bottom: 1px solid #555; /* Đường kẻ dưới tiêu đề */
+  padding-bottom: 5px; /* Khoảng cách giữa chữ và đường kẻ */
+}
+
+.text-container p {
+  margin: 10px 0; /* Khoảng cách giữa các đoạn văn */
+}
+
+/* Định kiểu cho dòng thời gian */
+.time {
+  color: #4CAF50; /* Màu chữ */
+  font-weight: bold; /* In đậm */
+  background-color: #222; /* Màu nền cho khối thời gian */
+  padding: 5px 10px; /* Đệm cho khối thời gian */
+  border-radius: 5px; /* Bo góc cho khối thời gian */
+  display: inline-block; /* Để khối thời gian không chiếm toàn bộ chiều rộng */
+  margin-top: 10px; /* Khoảng cách phía trên khối thời gian */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-header">NGÀY 1</div>
+    <div class="card-content">
+        <div class="text-container">
+            <h3>Hoạt động</h3>
+            <p>Giãn cơ và khởi động</p>
+            <p>Chạy ngắn 3 dặm</p>
+            <p>Ngực và vai</p>
+            <div class="time">Thời gian: 2 tiếng</div>
+          </div>
+          
+    <img src="ngay1" alt="Ảnh Mô Tả Ngày 1">
+    </div>
+    <div class="card-footer">TỔNG CALO: 410</div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-header">NGÀY 2</div>
+    <div class="card-content">
+      <img src="đường_dẫn_ảnh_ngày_2.jpg" alt="Ảnh Mô Tả Ngày 2">
+      <!-- Nội dung cho ngày 2 -->
+    </div>
+    <div class="card-footer">TỔNG CALO: 410</div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="card-header">NGÀY 3</div>
+    <div class="card-content">
+      <img src="đường_dẫn_ảnh_ngày_3.jpg" alt="Ảnh Mô Tả Ngày 3">
+      <!-- Nội dung cho ngày 3 -->
+    </div>
+    <div class="card-footer">TỔNG CALO: 410</div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card">
+    <div class="card-header">NGÀY 4</div>
+    <div class="card-content">
+      <img src="đường_dẫn_ảnh_ngày_4.jpg" alt="Ảnh Mô Tả Ngày 4">
+      <!-- Nội dung cho ngày 4 -->
+    </div>
+    <div class="card-footer">TỔNG CALO: 500</div>
+  </div>
+</div>
+
+</body>
+</html>

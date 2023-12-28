@@ -82,3 +82,48 @@ nav ul li a {
   cursor: pointer; /* Thay đổi con trỏ chuột khi rê lên nút */
 }
 
+
+/* Đặt lề và đệm cho toàn bộ trang là 0 để không có khoảng trắng ngoài cùng */
+body, html {
+  margin: 0;
+  padding: 0;
+  /* Đặt chiều cao của toàn bộ trang bằng với chiều cao của viewport */
+  height: 100%;
+  /* Đặt hình nền, căn giữa và kích thước phù hợp với màn hình */
+  background-size: cover;
+}
+
+/* Thiết lập container để chứa nội dung, sử dụng flexbox để căn giữa nội dung */
+.container {
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Các item được xếp theo chiều dọc */
+  justify-content: center; /* Căn giữa nội dung theo chiều dọc */
+  align-items: center; /* Căn giữa nội dung theo chiều ngang */
+  height: 100vh; /* Chiều cao bằng với 100% chiều cao của viewport */
+  text-align: center; /* Căn giữa text */
+  color: white; /* Màu chữ trắng */
+}
+
+/* Định dạng cho slogan (khẩu hiệu) */
+.slogan {
+  font-size: 60px; /* Kích thước chữ */
+  margin: 40px 0; /* Khoảng cách trên và dưới slogan */
+}
+
+/* Định dạng cho các nút CTA (kêu gọi hành động) */
+.cta-buttons button {
+  background-color: rgba(248, 183, 41, 0.711); /* Màu nền cho nút */
+  color: black; /* Màu chữ */
+  border: none; /* Không viền */
+  margin: 20px; /* Khoảng cách giữa các nút */
+  cursor: pointer; /* Con trỏ chuột sẽ thay đổi khi rê chuột lên nút */
+  border-radius: 25px; /* Bo tròn các góc của nút */
+}
+
+
+/* Thay đổi màu nền của nút khi rê chuột lên trên */
+.cta-buttons button:hover {
+  background-color: #ff0000; /* Màu nền sẫm hơn khi hover */
+}
+
+
