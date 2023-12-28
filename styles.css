@@ -29,11 +29,11 @@ body, html {
 }
 
 #large-text {
-  font-size: 1.72em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large-text */
+  font-size: 1.6em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large-text */
 }
 
 #large{
-  font-size: 1.5em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large */
+  font-size: 1.4em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large */
 }
 
 * {
@@ -81,3 +81,4 @@ nav ul li a {
   background-color: #06dddde5; /* Đặt màu nền cho nút */
   cursor: pointer; /* Thay đổi con trỏ chuột khi rê lên nút */
 }
+

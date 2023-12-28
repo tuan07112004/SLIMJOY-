@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Reviews</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.review-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.user-review {
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.rating {
+    font-size: 1.5em;
+    color: #ffd700;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.user-info img {
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-comment {
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+/* css gửi đánh giá */
+.submit-review {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-form input, #review-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#review-form .rating-input {
+    margin-bottom: 10px;
+}
+
+#review-form button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#review-form button:hover {
+    background-color: #0056b3;
+}
+
+/* css về trang chủ  */
+.home-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.home-button a:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="review-container">
+    <h2>XẾP HẠNG VÀ ĐÁNH GIÁ TỪ NGƯỜI DÙNG</h2>
+    <!-- Form để người dùng gửi đánh giá -->
+<div class="submit-review">
+    <h3>Gửi Đánh Giá Của Bạn</h3>
+    <form id="review-form">
+        <input type="text" id="name" placeholder="Tên của bạn" required>
+        <textarea id="comment" placeholder="Đánh giá của bạn" required></textarea>
+        <div class="rating-input">
+            <label>
+                <input type="radio" name="rating" value="5" required> 5 sao
+            </label>
+            <label>
+                <input type="radio" name="rating" value="4"> 4 sao
+            </label>
+            <label>
+                <input type="radio" name="rating" value="3"> 3 sao
+            </label>
+            <label>
+                <input type="radio" name="rating" value="2"> 2 sao
+            </label>
+            <label>
+                <input type="radio" name="rating" value="1"> 1 sao
+            </label>
+        </div>
+        <button type="submit">Gửi Đánh Giá</button>
+    </form>
+</div>
+
+    <!-- User Review 1 -->
+    <div class="user-review">
+        <div class="rating">★★★★★</div>
+        <div class="user-info">
+            <img src="taphuong.jpg" alt="User 1">
+            <p class="user-name">ĐỖ MINH TUẤN</p>
+            <p class="user-comment">"Trang web này thật sự thay đổi cuộc sống của tôi! ..."</p>
+        </div>
+    </div>
+    <!-- User Review 2 -->
+    <div class="user-review">
+        <div class="rating">★★★★☆</div>
+        <div class="user-info">
+            <img src="thephong.jpg" alt="User 2">
+            <p class="user-name">TA THI PHƯƠNG</p>
+            <p class="user-comment">"Chương trình giảm cân này khá hữu ích. ..."</p>
+        </div>
+    </div>
+    <!-- User Review 3 -->
+    <div class="user-review">
+        <div class="rating">★★★☆☆</div>
+        <div class="user-info">
+            <img src="tranminh.jpg" alt="User 3">
+            <p class="user-name">LÊ THỊ HOÀI</p>
+            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+        </div>
+    </div>
+    <div class="user-review">
+        <div class="rating">★★★☆☆</div>
+        <div class="user-info">
+            <img src="ly.jpg" alt="User 3">
+            <p class="user-name">LÊ THỊ HOÀI</p>
+            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+        </div>
+    </div>
+    <div class="user-review">
+        <div class="rating">★★★☆☆</div>
+        <div class="user-info">
+            <img src="tuanminh.jpg" alt="User 3">
+            <p class="user-name">LÊ THỊ HOÀI</p>
+            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+        </div>
+    </div>
+    <div class="user-review">
+        <div class="rating">★★★☆☆</div>
+        <div class="user-info">
+            <img src="lehoai.jpg" alt="User 3">
+            <p class="user-name">LÊ THỊ HOÀI</p>
+            <p class="user-comment">"Website cung cấp thông tin cần thiết nhưng không thực sự phù hợp với tất cả mọi người. ..."</p>
+        </div>
+    </div>
+    <!-- Nút quay về trang chủ -->
+    <div class="home-button">
+    <a href="trangchu.html" id="home-button">Trang Chủ</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById('review-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Lấy giá trị từ form
+    var name = document.getElementById('name').value;
+    var comment = document.getElementById('comment').value;
+    var rating = document.querySelector('input[name="rating"]:checked').value;
+
+    // Tạo và thêm đánh giá mới vào trang
+    var reviewContainer = document.createElement('div');
+    reviewContainer.classList.add('user-review');
+
+    var ratingDisplay = document.createElement('div');
+    ratingDisplay.classList.add('rating');
+    ratingDisplay.textContent = '★'.repeat(rating) + '☆'.repeat(5-rating);
+    
+    var userInfo = document.createElement('div');
+    userInfo.classList.add('user-info');
+
+    var userComment = document.createElement('p');
+    userComment.classList.add('user-comment');
+    userComment.textContent = '"' + comment + '"';
+
+    var userName = document.createElement('p');
+    userName.classList.add('user-name');
+    userName.textContent = name;
+
+    // Xây dựng cấu trúc HTML và chèn nó
+    userInfo.appendChild(userName);
+    userInfo.appendChild(userComment);
+    reviewContainer.appendChild(ratingDisplay);
+    reviewContainer.appendChild(userInfo);
+
+    var mainContainer = document.querySelector('.review-container');
+    mainContainer.appendChild(reviewContainer);
+
+    // Xóa form
+    document.getElementById('review-form').reset();
+});
+
+</script>
+</body>
+</html>
