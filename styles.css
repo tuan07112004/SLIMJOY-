@@ -1,0 +1,83 @@
+body, html {
+  margin: 0; /* Xóa lề mặc định cho cả thẻ body và html */
+  height: 100%; /* Đặt chiều cao tối đa của cả body và html để chiếm toàn bộ chiều cao của viewport */
+  padding: 0; /* Đặt đệm là 0 để không có khoảng cách thêm xung quanh nội dung */
+  font-family: Arial, sans-serif; /* Đặt phông chữ mặc định cho trang là Arial hoặc sans-serif */
+}
+
+.navbar {
+  display: flex; /* Áp dụng bố cục flexbox cho thanh điều hướng */
+  justify-content: space-between; /* Phân bổ không gian giữa các thành phần của flex container */
+  align-items: center; /* Căn các thành phần theo chiều dọc trong flex container */
+  height: 100px; /* Đặt chiều cao cố định cho navbar */
+  width: 100%; /* Đặt chiều rộng navbar bằng với chiều rộng của viewport */
+  top: 0; /* Đặt navbar ở vị trí trên cùng của viewport */
+  z-index: 1000; /* Đảm bảo navbar nằm trên các thành phần khác khi chồng lên */
+  color: black; /* Đặt màu chữ cho các thành phần trong navbar */
+}
+
+.navbar a {
+  text-decoration: none; /* Loại bỏ gạch dưới của liên kết */
+  padding: 40px; /* Đặt đệm xung quanh liên kết */
+  color: rgb(228, 159, 11); /* Đặt màu chữ cho liên kết */
+  font-size: 20px; /* Đặt cỡ chữ cho liên kết */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Đặt màu nền cho liên kết khi rê chuột lên */
+  color: black; /* Đặt màu chữ cho liên kết khi rê chuột lên */
+}
+
+#large-text {
+  font-size: 1.72em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large-text */
+}
+
+#large{
+  font-size: 1.5em; /* Đặt cỡ chữ lớn hơn cho thành phần có ID large */
+}
+
+* {
+  margin: 0; /* Xóa lề mặc định cho tất cả các thành phần */
+  padding: 0; /* Xóa đệm mặc định cho tất cả các thành phần */
+  box-sizing: border-box; /* Đặt box-sizing để kích thước của phần tử bao gồm cả padding và border */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.5); /* Màu nền là một màu xám với độ trong suốt 50% */
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none; /* Xóa kiểu danh sách mặc định */
+  display: flex; /* Áp dụng bố cục flexbox cho danh sách */
+  margin-left: auto; /* Đẩy danh sách về phía bên phải của container */
+}
+
+nav ul li {
+  padding: 0 20px; /* Đặt đệm trái và phải cho mỗi li trong danh sách */
+}
+
+nav ul li a {
+  text-decoration: none; /* Loại bỏ gạch dưới của liên kết */
+  color: white; /* Đặt màu chữ cho liên kết */
+}
+
+.account-actions {
+  display: flex; /* Áp dụng bố cục flexbox cho hành động tài khoản */
+  align-items: center; /* Căn các thành phần theo chiều dọc */
+  margin-left: auto; /* Đẩy các thành phần về phía bên phải */
+}
+
+.account-actions input[type="search"] {
+  padding: 10px; /* Đặt đệm cho trường tìm kiếm */
+  margin-right: 20px; /* Đặt khoảng cách bên phải cho trường tìm kiếm */
+}
+
+.account-actions button {
+  padding: 15px 15px; /* Đặt đệm cho nút */
+  background-color: #06dddde5; /* Đặt màu nền cho nút */
+  cursor: pointer; /* Thay đổi con trỏ chuột khi rê lên nút */
+}
