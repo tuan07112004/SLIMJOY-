@@ -6,8 +6,10 @@
 <title>Lịch Trình Tập Luyện và Ăn Uống</title>
 <style>
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7; /* Màu nền nhẹ cho trang */
+    background-image: url("background.jpg"); /* Hình nền cho thẻ body, sử dụng hình ảnh "Click Here.jpg" */
+    font-family: Arial, sans-serif; /* Thiết lập loại phông chữ */
+    background-color: #fff; /* Màu nền là màu trắng */
+    color: #333; /* Màu chữ mặc định là màu xám đậm */
 }
 
 .container {
@@ -16,14 +18,15 @@ body {
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  font-size: 21px ;
 }
 
 .card {
   border: none; /* Bỏ viền mặc định */
   border-radius: 10px; /* Bo góc */
   overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Thêm bóng đổ */
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1); /* Thêm bóng đổ */
   transition: 0.3s; /* Hiệu ứng chuyển đổi mượt */
 }
 
@@ -53,8 +56,8 @@ body {
 
 .card-content li {
   margin-bottom: 10px;
-  font-size: 16px; /* Cỡ chữ lớn hơn */
-  line-height: 1.6; /* Khoảng cách dòng */
+  font-size: 45px; /* Cỡ chữ lớn hơn */
+  line-height: 1.4; /* Khoảng cách dòng */
 }
 
 .card-content a {
@@ -66,8 +69,8 @@ body {
 .card-content img {
   width: 100%;
   height: auto;
-  border-top: 1px solid #eee; /* Đường kẻ phân cách */
-  border-bottom: 1px solid #eee; /* Đường kẻ phân cách */
+  border-top: 2px solid #eee; /* Đường kẻ phân cách */
+  border-bottom: 2px solid #eee; /* Đường kẻ phân cách */
   margin-bottom: 20px; /* Khoảng cách dưới ảnh */
 }
 
@@ -94,7 +97,7 @@ body {
 }
 
 .card-footer:hover:after {
-  opacity: 0.9; /* Đổi độ trong suốt khi di chuột qua */
+  opacity: 0.5; /* Đổi độ trong suốt khi di chuột qua */
 }
 
 .text-container {
@@ -131,9 +134,125 @@ body {
   margin-top: 10px; /* Khoảng cách phía trên khối thời gian */
 }
 
+  /* Định dạng nút quay về trang chủ */
+  .home-button {
+        display: inline-block;
+        padding: 30px 60px;
+        margin: 50px;
+        background: linear-gradient(120deg, #ab0558e6 0%, #66a6ff 100%);
+        color: black; /* Màu chữ của nút */
+        text-align: center;
+        text-decoration: none; /* Bỏ gạch chân của liên kết */
+        font-weight: bold;
+        border-radius: 10px; /* Góc bo tròn của nút */
+        font-size: 40px; /* Kích thước chữ của nút */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+    }
+
+    .home-button:hover {
+        background-color: #45a049; /* Màu nền khi hover */
+    }
+
+    .tieu-de {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Điều chỉnh chiều cao này tùy theo nhu cầu */  
+  font-size: 25px;
+}
+
+.tieu-de h1 {
+  background: -webkit-linear-gradient(120deg, #f50982 0%, #8a1818 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Cần thiết để hiển thị gradient trên nền chữ */
+}
+
+/* ĐẶT LỊCH ĂN UỐNG VÀ TẬP LUYỆN */
+
+#scheduleForm {
+  background-image: linear-gradient(120deg, #ab0558e6 0%, #66a6ff 100%); /* Đặt màu nền cho form là màu xám nhạt */
+    padding: 50px; /* Thêm đệm xung quanh nội dung bên trong form */
+    text-align: center; /* Căn giữa văn bản bên trong form */
+    border-radius: 30px; /* Làm tròn các góc của form với bán kính 10px */
+    width: 500px; /* Đặt chiều rộng cố định cho form là 300px */
+    margin: auto; /* Đặt lề tự động trên cả hai bên để căn giữa form trên trang */
+    
+}
+
+#datetime, #activity {
+    margin: 10px 0; /* Đặt lề trên và dưới là 10px, không có lề ngang */
+    padding: 20px; /* Thêm đệm bên trong các phần tử để nội dung không dính vào cạnh */
+    border-radius: 9px; /* Làm tròn các góc với bán kính 5px */
+    border: 3px solid #ddd; /* Đặt viền 1px màu xám nhạt */
+    width: 100%; /* Đặt chiều rộng của các phần tử là 90% so với phần tử cha của chúng */
+    font-size: 25px;
+
+}
+
+#setSchedule {
+    padding: 20px 20px; /* Đặt đệm 10px cho trên/dưới và 20px cho trái/phải */
+    background-color: #1cbb21b4; /* Đặt màu nền là màu xanh lá cây đậm */
+    color: white; /* Đặt màu chữ là màu trắng */
+    border: none; /* Loại bỏ viền xung quanh nút */
+    border-radius: 5px; /* Làm tròn các góc của nút với bán kính 5px */
+    cursor: pointer; /* Khi di chuột lên trên nút, con trỏ sẽ thay đổi thành hình dạng chỉ tay, chỉ ra rằng nút có thể được nhấp */
+    font-size: 25px;
+
+}
+
 </style>
 </head>
 <body>
+
+</head>
+<body>
+    <div id="scheduleForm">
+      <div class="tieu-de">
+        <h1>Đặt lịch</h1>
+    </div>
+        <input type="datetime-local" id="datetime" />
+        <select id="activity">
+            <option value="eating">Ăn Uống</option>
+            <option value="exercising">Luyện Tập</option>
+        </select>
+        <button id="setSchedule">Đặt Lịch</button>
+    </div>
+<script>
+  document.getElementById('setSchedule').addEventListener('click', function() {
+    var datetime = document.getElementById('datetime').value;
+    var activity = document.getElementById('activity').value;
+
+    // Thêm logic để xử lý lưu trữ và nhắc nhở ở đây
+    alert('Bạn đã đặt lịch ' + (activity === 'eating' ? 'ăn uống' : 'luyện tập') + ' vào ' + datetime);
+});
+// script.js
+document.getElementById('setSchedule').addEventListener('click', function() {
+    var datetime = document.getElementById('datetime').value;
+    var activity = document.getElementById('activity').value;
+
+    if(datetime && activity) {
+        saveSchedule(datetime, activity);
+        alert('Bạn đã đặt lịch ' + (activity === 'eating' ? 'ăn uống' : 'luyện tập') + ' vào ' + datetime);
+    } else {
+        alert('Vui lòng chọn thời gian và hoạt động.');
+    }
+});
+
+function saveSchedule(datetime, activity) {
+    // Lưu trữ lịch trình vào localStorage (ví dụ đơn giản)
+    var schedules = JSON.parse(localStorage.getItem('schedules') || '[]');
+    schedules.push({ datetime, activity });
+    localStorage.setItem('schedules', JSON.stringify(schedules));
+}
+
+</script>
+
+
+<div class="tieu-de">
+    <h1>Tư vấn từ chuyên gia</h1>
+</div>
+
 
 <div class="container">
   <!-- Card 1 -->
@@ -147,7 +266,7 @@ body {
             <p>Ngực và vai</p>
             <div class="time">Thời gian: 2 tiếng</div>
           </div>
-          
+        <h3>Thực đơn</h3>
     <img src="ngay1" alt="Ảnh Mô Tả Ngày 1">
     </div>
     <div class="card-footer">TỔNG CALO: 410</div>
@@ -157,32 +276,56 @@ body {
   <div class="card">
     <div class="card-header">NGÀY 2</div>
     <div class="card-content">
-      <img src="đường_dẫn_ảnh_ngày_2.jpg" alt="Ảnh Mô Tả Ngày 2">
-      <!-- Nội dung cho ngày 2 -->
+      <div class="text-container">
+        <h3>Hoạt động</h3>
+        <p>Chân và cardio</p>
+        <p>Chạy nhẹ nhàng 3 dặm</p>
+        <p>Dựa tường chống đẩy</p>
+        <div class="time">Thời gian: 1 tiếng</div>
+      </div>
+    <h3>Thực đơn</h3>
+    <img src="ngay2.webp" alt="Ảnh Mô Tả Ngày 2">
     </div>
-    <div class="card-footer">TỔNG CALO: 410</div>
+    <div class="card-footer">TỔNG CALO: 560</div>
   </div>
 
   <!-- Card 3 -->
   <div class="card">
     <div class="card-header">NGÀY 3</div>
     <div class="card-content">
-      <img src="đường_dẫn_ảnh_ngày_3.jpg" alt="Ảnh Mô Tả Ngày 3">
-      <!-- Nội dung cho ngày 3 -->
+        <div class="text-container">
+            <h3>Hoạt động</h3>
+            <p>Giãn cơ và khởi động</p>
+            <p>Chạy ngắn 3 dặm</p>
+            <p>Ngực và vai</p>
+            <div class="time">Thời gian: 30 phút</div>
+            
+          </div>
+        <h3>Thực đơn</h3>
+    <img src="ngay3.webp" alt="Ảnh Mô Tả Ngày 3">
     </div>
-    <div class="card-footer">TỔNG CALO: 410</div>
+    <div class="card-footer">TỔNG CALO: 500</div>
   </div>
 
   <!-- Card 4 -->
   <div class="card">
     <div class="card-header">NGÀY 4</div>
     <div class="card-content">
-      <img src="đường_dẫn_ảnh_ngày_4.jpg" alt="Ảnh Mô Tả Ngày 4">
-      <!-- Nội dung cho ngày 4 -->
+      <div class="text-container">
+        <h3>Hoạt động</h3>
+        <p>Chân và cardio</p>
+        <p>Chạy nhẹ nhàng 3 dặm</p>
+        <p>Dựa tường chống đẩy</p>
+        <div class="time">Thời gian: 1 tiếng 30 phút</div>
+      </div>
+    <h3>Thực đơn</h3>
+    <img src="ngay4.webp"  alt="Ảnh Mô Tả Ngày 2" width="1000px">
     </div>
-    <div class="card-footer">TỔNG CALO: 500</div>
+    <div class="card-footer">TỔNG CALO: 410</div>
   </div>
 </div>
+
+<a href="trangchu.html" class="home-button">Trang Chủ</a>
 
 </body>
 </html>

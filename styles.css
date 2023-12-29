@@ -112,7 +112,7 @@ body, html {
 
 /* Định dạng cho các nút CTA (kêu gọi hành động) */
 .cta-buttons button {
-  background-color: rgba(248, 183, 41, 0.711); /* Màu nền cho nút */
+  background: linear-gradient(120deg, #ab0558e6 0%, #66a6ff 100%); /* Màu nền cho nút */
   color: black; /* Màu chữ */
   border: none; /* Không viền */
   margin: 20px; /* Khoảng cách giữa các nút */
