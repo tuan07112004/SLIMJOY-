@@ -7,68 +7,66 @@ body {
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		h1 {
-			color: #c90b0b;
-			text-align: center;
-		}
+
 		form {
-			border: 3px solid #f1f1f1;
-			margin-left: 40px;
-			margin-right: 40px;
-			margin-top: 40px;
-			padding: 20px;
-			background-color: white;
-		}
-		input[type=text], input[type=password] {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-		}
-		button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-		}
-		button:hover {
-			opacity: 0.8;
-		}
-		.cancelbtn {
-			width: auto;
-			padding: 10px 18px;
-			background-color: #f44336;
-		}
-		.imgcontainer {
-			text-align: center;
-			margin: 24px 0 12px 0;
-			position: relative;
-		}
-		img.avatar {
-			width: 40%;
-			border-radius: 50%;
-		}
-		.container {
-			padding: 16px;
-		}
-		span.psw {
-			float: right;
-			padding-top: 16px;
-		}
-		@media screen and (max-width: 300px) {
-			span.psw {
-				display: block;
-				float: none;
-			}
-			.cancelbtn {
-				width: 100%;
-			}
-		}	</style>
+    border: 4px solid #7a1d86; /* Đường viền dày 4px, màu tím đậm cho form */
+    margin-left: 500px; /* Khoảng cách lề trái của form là 500px */
+    margin-right: 500px; /* Khoảng cách lề phải của form là 500px */
+    margin-top: 90px; /* Khoảng cách lề trên của form là 90px */
+    padding: 20px; /* Đệm bên trong của form là 20px */
+    background-color: white; /* Màu nền của form là màu trắng */
+}
+input[type=text], input[type=password] {
+    width: 100%; /* Chiều rộng của các trường nhập liệu chiếm 100% */
+    padding: 12px 20px; /* Đệm bên trong của trường nhập liệu */
+    margin: 8px 0; /* Khoảng cách giữa các trường nhập liệu */
+    display: inline-block; /* Các trường nhập liệu hiển thị nối tiếp nhau */
+    border: 1px solid #ccc; /* Đường viền của trường nhập liệu màu xám */
+    box-sizing: border-box; /* Cách tính kích thước của trường nhập liệu */
+    font-size: 20px; /* Kích thước phông chữ của trường nhập liệu là 20px */
+}
+button {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); /* Nền nút là gradient từ màu hồng sang màu đỏ */
+    color: white; /* Màu chữ của nút bấm là màu trắng */
+    padding: 14px 20px; /* Đệm bên trong của nút bấm */
+    margin: 8px 0; /* Khoảng cách giữa các nút bấm */
+    border: none; /* Không có đường viền cho nút bấm */
+    cursor: pointer; /* Con trỏ chuột thay đổi khi di chuyển qua nút */
+    width: 100%; /* Chiều rộng của nút bấm chiếm 100% */
+    font-size: 20px; /* Kích thước phông chữ của nút bấm là 20px */
+}
+button:hover {
+    opacity: 0.8; /* Khi di chuột qua nút bấm, nút sẽ trong suốt hơn */
+}
+.cancelbtn {
+    width: auto; /* Chiều rộng của nút hủy tự động điều chỉnh */
+    padding: 10px 18px; /* Đệm bên trong của nút hủy */
+    background-color: #f44336; /* Màu nền của nút hủy là màu đỏ */
+}
+.imgcontainer {
+    text-align: center; /* Căn giữa nội dung bên trong container hình ảnh */
+    margin: 24px 0 12px 0; /* Khoảng cách xung quanh container hình ảnh */
+    position: relative; /* Vị trí của container hình ảnh là tương đối */
+}
+
+.container {
+    padding: 20px; /* Đệm bên trong của container là 25px */
+    font-size: 25px; /* Kích thước phông chữ bên trong container là 25px */
+}
+span.psw {
+    float: right; /* Văn bản mật khẩu nằm bên phải */
+    padding-top: 16px; /* Đệm trên của văn bản mật khẩu */
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block; /* Hiển thị văn bản mật khẩu dưới dạng khối */
+        float: none; /* Không cho văn bản mật khẩu nổi bên phải */
+    }
+    .cancelbtn {
+        width: 100%; /* Nút hủy chiếm 100% chiều rộng trên màn hình nhỏ */
+    }
+}
+		</style>
 </head>
 <body>
 
@@ -94,7 +92,7 @@ body {
 	</div>
 </form>
 
-<div class="container" style="background-color:#f1f1f1; text-align: center;">
+<div class="container" style="background-color:#f1f1f1; text-align: center">
 	<p>Bạn chưa có tài khoản? <a href="signup.html">Đăng kí ngay</a></p>
 </div>
 
@@ -107,7 +105,9 @@ body {
     
         var predefinedUsername = "admin";
         var predefinedPassword = "123";
-    
+
+		var predefinedUsername = "dominhtuan";
+        var predefinedPassword = "123";
         if(username == predefinedUsername && password == predefinedPassword) {
             alert("Đăng nhập thành công!");
             window.location.href = "trangchu.html"; // Chuyển hướng đến trang chủ

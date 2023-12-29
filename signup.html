@@ -2,73 +2,74 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Đăng kí</title>
 	<style>
-		body {
-			background-image: url('background.jpg');
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		h1 {
-			color: #4CAF50;
-			text-align: center;
-		}
-		form {
-			border: 3px solid #f1f1f1;
-			margin-left: 40px;
-			margin-right: 40px;
-			margin-top: 40px;
-			padding: 20px;
-			background-color: white;
-		}
-		input[type=text], input[type=password], input[type=email], input[type=tel] {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-		}
-		button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-		}
-		button:hover {
-			opacity: 0.8;
-		}
-		.cancelbtn {
-			width: auto;
-			padding: 10px 18px;
-			background-color: #f44336;
-		}
-		.imgcontainer {
-			text-align: center;
-			margin: 24px 0 12px 0;
-			position: relative;
-		}
-		img.avatar {
-			width: 40%;
-			border-radius: 50%;
-		}
-		.container {
-			padding: 16px;
-		}
-		span.psw {
-			float: right;
-			padding-top: 16px;
-		}
-		@media screen and (max-width: 300px) {
-			span.psw {
-				display: block;
-				float: none;
-			}
-			.cancelbtn {
-				width: 100%;
-			}
-		}
+body {
+    background-image: url('background.jpg'); /* Thiết lập hình nền cho thẻ body */
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background-size: cover; /* Hình nền phủ kín toàn bộ phần hiển thị */
+	font-size: 50px ;
+}
+
+form {
+    border: 4px solid #7a1d86; /* Đường viền dày 3px, màu xám nhạt cho form */
+    margin-left: 500px; /* Khoảng cách lề trái của form */
+    margin-right: 500px; /* Khoảng cách lề phải của form */
+    margin-top: 90px; /* Khoảng cách lề trên của form */
+    padding: 20px; /* Đệm bên trong của form */
+    background-color: white; /* Màu nền của form là màu trắng */
+}
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+    width: 100%; /* Chiều rộng của các trường nhập liệu chiếm 100% */
+    padding: 15px 20px; /* Đệm bên trong của trường nhập liệu */
+    margin: 12px 0; /* Khoảng cách giữa các trường nhập liệu */
+    display: inline-block; /* Các trường nhập liệu hiển thị nối tiếp nhau */
+    border: 3px solid #ccc; /* Đường viền của trường nhập liệu màu xám */
+    box-sizing: border-box; /* Cách tính kích thước của trường nhập liệu */
+	font-size: 20px ;
+}
+button {
+	background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); /* Gradient màu */
+    color: white; /* Màu chữ của nút bấm là màu trắng */
+    padding: 14px 20px; /* Đệm bên trong của nút bấm */
+    margin: 8px 0; /* Khoảng cách giữa các nút bấm */
+    border: none; /* Không có đường viền cho nút bấm */
+    cursor: pointer; /* Con trỏ chuột thay đổi khi di chuyển qua nút */
+    width: 100%; /* Chiều rộng của nút bấm chiếm 100% */
+	font-size: 20px ;
+}
+button:hover {
+    opacity: 0.8; /* Khi di chuột qua nút bấm, nút sẽ trong suốt hơn */
+}
+.cancelbtn {
+    width: auto; /* Chiều rộng của nút hủy tự động điều chỉnh */
+    padding: 10px 18px; /* Đệm bên trong của nút hủy */
+    background-color: #f44336; /* Màu nền của nút hủy là màu đỏ */
+}
+.imgcontainer {
+    text-align: center; /* Căn giữa nội dung bên trong container hình ảnh */
+    margin: 24px 0 12px 0; /* Khoảng cách xung quanh container hình ảnh */
+    position: relative; /* Vị trí của container hình ảnh là tương đối */
+}
+img.avatar {
+    width: 40%; /* Chiều rộng của hình ảnh đại diện là 40% */
+    border-radius: 50%; /* Bo tròn hình ảnh đại diện */
+}
+.container {
+    padding: 16px; /* Đệm bên trong của container */
+	font-size: 25px ;
+}
+span.psw {
+    float: right; /* Văn bản mật khẩu nằm bên phải */
+    padding-top: 16px; /* Đệm trên của văn bản mật khẩu */
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block; /* Hiển thị văn bản mật khẩu dưới dạng khối */
+        float: none; /* Không cho văn bản mật khẩu nổi bên phải */
+    }
+    .cancelbtn {
+        width: 100%; /* Nút hủy chiếm 100% chiều rộng trên màn hình nhỏ */
+    }
+}
 	</style>
 </head>
 <body>
@@ -98,7 +99,6 @@
 	</div>
 </form>
 
-<!-- <p>Bạn đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>.</p> -->
 
 <script>
 function validateEmail(email) {
