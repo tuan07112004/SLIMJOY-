@@ -78,20 +78,10 @@ nav ul li a {
 
 .account-actions button {
   padding: 15px 15px; /* Đặt đệm cho nút */
-  background-color: #06dddde5; /* Đặt màu nền cho nút */
+  background: linear-gradient(120deg, #ab0558e6 0%, #66a6ff 100%); /* Gradient tuyến tính cho nền */
   cursor: pointer; /* Thay đổi con trỏ chuột khi rê lên nút */
 }
 
-
-/* Đặt lề và đệm cho toàn bộ trang là 0 để không có khoảng trắng ngoài cùng */
-body, html {
-  margin: 0;
-  padding: 0;
-  /* Đặt chiều cao của toàn bộ trang bằng với chiều cao của viewport */
-  height: 100%;
-  /* Đặt hình nền, căn giữa và kích thước phù hợp với màn hình */
-  background-size: cover;
-}
 
 /* Thiết lập container để chứa nội dung, sử dụng flexbox để căn giữa nội dung */
 .container {
