@@ -30,7 +30,7 @@ body, html {
 }
 
 .navbar a:hover {
-  background-color: #ddd; /* Đặt màu nền cho liên kết khi rê chuột lên */
+  background: linear-gradient(120deg, #ab0558e6 0%, #66a6ff 100%);
   color: black; /* Đặt màu chữ cho liên kết khi rê chuột lên */
 }
 
